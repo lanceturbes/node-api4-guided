@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const app = express();
 
@@ -7,6 +8,10 @@ app.get("/", (req, res) => {
   res.send(`
     <h1>Web 47 rocks!</h1>
   `);
+});
+
+app.listen(PORT, () => {
+  console.log(`Listening on port ${PORT}...`);
 });
 
 // eslint-disable-next-line
